@@ -3,6 +3,8 @@ import sys
 from logger import logging
 from exception import CustomException
 
+from data_transformation import DataTransformation
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
@@ -42,10 +44,11 @@ class DataIngestion():
         
         except Exception as e:
             raise CustomException(e,sys)
-'''
-Testing data ingestion
+        
 
 if __name__ == '__main__':
     di = DataIngestion()
-    di.initiate_data_ingestion()
-'''
+    train_data, test_data = di.initiate_data_ingestion()
+
+    data_transform = DataTransformation()
+    data_transform.initiate_data_transform(train_data, test_data)
