@@ -95,6 +95,8 @@ class DataTransformation():
                 obj = preprocessor_object
             )
 
+            logging.info('transformation completed')
+
             return (
                 train_arr,
                 test_arr,
