@@ -30,16 +30,36 @@ class ModelTrainer:
             X_train, y_train, X_test, y_test = train_array[:,:-1], train_array[:,-1], test_array[:,:-1], test_array[:,-1]
 
             models = {
-                'linear':LinearRegression(),
-                'forest':RandomForestRegressor(),
-                'tree':DecisionTreeRegressor(),
-                'neighbor':KNeighborsRegressor(),
-                'gradient':GradientBoostingRegressor()
+                'LinearRegression':LinearRegression(),
+                'RandomForest':RandomForestRegressor(),
+                'DecisionTree':DecisionTreeRegressor(),
+                #'neighbor':KNeighborsRegressor(),
+                #'GradientBoosting':GradientBoostingRegressor()
+            }
+
+            params={
+
+                "LinearRegression":{},
+                
+                "RandomForest":{
+                    # 'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+                 
+                    # 'max_features':['sqrt','log2',None],
+                    'n_estimators': [128,256]
+                },
+
+                "DecisionTree": {
+                    'criterion':['squared_error', 'absolute_error'],
+                    # 'splitter':['best','random'],
+                    # 'max_features':['sqrt','log2'],
+                }
+                
+            
             }
 
             logging.info('Entering Training phase')
 
-            model_report :dict = evaluate_model(X_train = X_train, y_train = y_train, X_test = X_test, y_test = y_test, models = models)
+            model_report :dict = evaluate_model(X_train = X_train, y_train = y_train, X_test = X_test, y_test = y_test, models = models, param = params)
 
             logging.info('Training Complete, entering predict phase')
 

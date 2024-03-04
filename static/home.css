@@ -1,0 +1,53 @@
+/* Default styles */
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #4CAF50; /* Add border */
+    font-size: 24px; /* Increase font size */
+    font-family: "Arial", sans-serif; /* Change font family */
+}
+
+input, select {
+    width: 100%;
+    padding: 16px 20px; /* Adjust padding */
+    margin: 6px 0; /* Decrease margin */
+    display: block;
+    border: none; /* Remove default border */
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif; /* Change font family */
+    font-size: 22px; /* Increase font size */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 24px 40px; /* Adjust padding */
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    font-size: 24px; /* Increase font size */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "Arial", sans-serif; /* Change font family */
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+    color: #4CAF50;
+    font-size: 24px; /* Increase font size on hover */
+}
+
+h2 {
+    font-family: "Arial", sans-serif; /* Change font family */
+    font-size: 28px; /* Increase font size */
+    text-align: center; /* Center text */
+    margin: 10px 0; /* Decrease margin */
+}
+
+h1{
+    margin:0%
+}
