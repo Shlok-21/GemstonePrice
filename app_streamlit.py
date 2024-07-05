@@ -1,4 +1,4 @@
-import app_streamlit as st
+import streamlit as st
 from src.pipeline.predict_pipeline import PredictPipeline, CustomData
 
 # Define the main function for the Streamlit app
