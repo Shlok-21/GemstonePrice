@@ -4,20 +4,25 @@ from src.pipeline.predict_pipeline import PredictPipeline, CustomData
 # Define the main function for the Streamlit app
 def main():
     st.title('Gemstone Price Prediction')
+    # Define a sidebar for the data dictionary
+    st.sidebar.title('Data Dictionary')
+    st.sidebar.markdown("""
+    **Carat**: Carat weight of the cubic zirconia.
 
-    # Display the data dictionary
-    st.markdown("""
-    **Data Dictionary**
+    **Cut**: Describe the cut quality of the cubic zirconia. Quality is in increasing order from Fair to Ideal.
 
-    - **Carat**: Carat weight of the cubic zirconia.
-    - **Cut**: Describe the cut quality of the cubic zirconia. Quality is in increasing order from Fair to Ideal.
-    - **Color**: Color of the cubic zirconia. D is the best and J is the worst.
-    - **Clarity**: Clarity refers to the absence of inclusions and blemishes in the cubic zirconia.
-      Clarity grades range from IF (Internally Flawless) to I1 (Included).
-    - **Depth**: Height of the cubic zirconia, measured from the Culet to the table, divided by its average girdle diameter.
-    - **Table**: Width of the cubic zirconia's table expressed as a percentage of its average diameter.
-    - **Price**: Price of the cubic zirconia.
-    - **X, Y, Z**: Dimensions of the cubic zirconia in millimeters (mm).
+    **Color**: Color of the cubic zirconia. D is the best and J is the worst.
+
+    **Clarity**: Clarity refers to the absence of inclusions and blemishes in the cubic zirconia. 
+    Clarity grades range from IF (Internally Flawless) to I1 (Included).
+
+    **Depth**: Height of the cubic zirconia, measured from the Culet to the table, divided by its average girdle diameter.
+
+    **Table**: Width of the cubic zirconia's table expressed as a percentage of its average diameter.
+
+    **Price**: Price of the cubic zirconia.
+
+    **X, Y, Z**: Dimensions of the cubic zirconia in millimeters (mm).
     """)
 
     # Collect user input
